@@ -1,0 +1,15 @@
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\bin\Debug\net8.0\TestingServer.exe
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\bin\Debug\net8.0\TestingServer.deps.json
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\bin\Debug\net8.0\TestingServer.runtimeconfig.json
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\bin\Debug\net8.0\TestingServer.dll
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\bin\Debug\net8.0\TestingServer.pdb
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.GeneratedMSBuildEditorConfig.editorconfig
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.AssemblyInfoInputs.cache
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.AssemblyInfo.cs
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.csproj.CoreCompileInputs.cache
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.sourcelink.json
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.dll
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\refint\TestingServer.dll
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.pdb
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\TestingServer.genruntimeconfig.cache
+E:\PrivateCode\TestingServer\ProjectFolder\TestingServer\obj\Debug\net8.0\ref\TestingServer.dll
