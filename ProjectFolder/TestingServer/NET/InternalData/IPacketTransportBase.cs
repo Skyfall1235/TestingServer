@@ -1,6 +1,6 @@
-﻿namespace TestingServer
+﻿namespace TestingServer.NET.InternalData
 {
-    public interface PacketTransportBase
+    public interface IPacketTransportBase
     {
         public enum OpCode : byte
         {

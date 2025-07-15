@@ -1,9 +1,21 @@
 ﻿using System;
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
-using static TestingServer.PacketTransportBase;
+using TestingServer.NET.InternalData;
+using TestingServer.NET.IO;
+using static TestingServer.NET.InternalData.IPacketTransportBase;
 
-
+//TO DO
+/*
+ * -create unit tests?
+ * -test connections, test responsiveness
+ * -add more op code handling
+ * -potnetialyl learn how to store stuff to a database?
+ * -
+ * -
+ * -
+ */
 namespace TestingServer
 {
     //THIS IS A TEMP REFERENCE SO I CAN KEEP TRACK OF THESE
@@ -15,10 +27,11 @@ namespace TestingServer
     internal class Program
     {
         static TcpListener? listener;
-        static ServerSetup setup;
-        static List<Client> users;
+        static ServerSetup? m_setup;
+        static LoginHandler loginHandler = new LoginHandler();
+        public static readonly ConcurrentDictionary<string, ClientUID> ConnectedClients = new();
         //so i dont have to manually type it ever again
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
             //some basic code, then creating a place to lsiten from
             Console.WriteLine("Hello, World!");
@@ -29,122 +42,126 @@ namespace TestingServer
             if (input != null)
             {
                 password = input;
-                setup = new ServerSetup(RefVars.ip, RefVars.portIn, password);
+                m_setup = new ServerSetup(RefVars.ip, RefVars.portIn, password);
             }
             else
             {
-                setup = new ServerSetup(RefVars.ip, RefVars.portIn);
+                m_setup = new ServerSetup(RefVars.ip, RefVars.portIn);
             }
-            
-            listener = new(setup.ServerIP, setup.Port);
-            users = new();
+
+            loginHandler.LoadFromFile();
+            listener = new(m_setup.ServerIP, m_setup.Port);
             listener.Start();
 
-            
+            using var cts = new CancellationTokenSource();
+
+            // Start server heartbeat
+            var heartbeatTask = HeartbeatAsync(TimeSpan.FromSeconds(10), cts.Token);
+
+
+            await AcceptClientsAsync();//begins asyncronously running accepting of clients
+
+            // Cancel the heartbeat and wait for it to finish
+            cts.Cancel();
+            await heartbeatTask;
+        }
+
+
+        static async Task AcceptClientsAsync()
+        {
             while (true)
             {
-                //this literally just listens for them.
-                var client = listener.AcceptTcpClient();
-                Console.WriteLine("client connected");
-                users.Add(new Client(client));
-                //if we need to broadcast the connection, do it here
+                var client = await listener!.AcceptTcpClientAsync();
+                Console.WriteLine("Client connected");
+
+                ClientUID newClientUID = new(client);
+
+                ConnectedClients.TryAdd(newClientUID.UID.ToString(), newClientUID);
+
+                // Handle client connection on a new task
+                _ = HandleClientAsync(newClientUID);
             }
         }
 
-        static void BroadcastConnection()
+        public static async Task HandleClientAsync(ClientUID clientId)
         {
-            foreach (Client client in users)
+            //we need to itialize the opcode handler instance
+            OpCodeHandler handler = new(ref loginHandler);
+            NetworkStream stream = clientId.ClientSocket.GetStream();
+            PacketReader reader = new PacketReader(stream);//since the reader contains the packet info, we pass it along :)
+
+            // 1. Read opcode (1 byte)
+            int opCode = stream.ReadByte();
+            OpCode sentCode = (OpCode)opCode;
+
+            //search our dictionary for the stuff we want to serve/do, and then run it if its found :)
+            if (handler.OpcodeHandlers.TryGetValue(sentCode, out var variableHandler))
             {
-                foreach (Client internalUser in users)
-                {
-                    var broadcastPacket = new PacketBuilder();
-                    broadcastPacket.WriteOpCode(OpcodeToByte(OpCode.Handshake));
-                    broadcastPacket.WriteString(internalUser.UserName);
-                    broadcastPacket.WriteString(internalUser.UserName.ToString());
-                    client.ClientSocket.Client.Send(broadcastPacket.GetPacketBytes());
-                }
+                await variableHandler(clientId, reader);
+            }
+            else
+            {
+                Console.WriteLine($"Unknown opcode from {clientId.UID}: {sentCode}");
+                //disconnect the client
+                await handler.HandleUnknown(clientId, reader);
             }
         }
 
-        
-    }
-
-    public class ClientServer
-    {
-        TcpClient client;
-        public PacketReader reader;
-        public event Action ConnectedEvent;
-
-        public ClientServer()
+        public static async Task HeartbeatAsync(TimeSpan interval, CancellationToken token)
         {
-            client = new TcpClient();
-            ConnectedEvent += UserConnected;
-        }
+            int tick = 0;
 
-        public void ConnectToServer(string userName)
-        {
-            if(!client.Connected)
+            while (!token.IsCancellationRequested)
             {
-                client.Connect(RefVars.ip, RefVars.portIn);
-                reader = new(client.GetStream());
-                //im using the username for now to get a better grasp on sending messages
-                if(!string.IsNullOrEmpty(userName))
-                {
-                    var connectedPacket = new PacketBuilder();
-                    connectedPacket.WriteOpCode(OpcodeToByte(OpCode.Handshake));
-                    connectedPacket.WriteString(userName);
-                    client.Client.Send(connectedPacket.GetPacketBytes());
-                }
-                ReadPackets();
+                Console.WriteLine($"[Heartbeat] Server is alive. Tick: {++tick} — {DateTime.Now:T}");
+                await Task.Delay(interval, token);
             }
-        }
-        public void UserConnected()
-        {
-            //in the tutorial, he calls to add this client to a collection of users. this isnt needed here:)
-        }
-        public void ReadPackets()
-        {//i feellike this could be better lol
-            Task.Run(() =>
-            {
-                while (true)
-                {
-                    OpCode opcode = (OpCode)reader.ReadByte();
-                    switch (opcode)
-                    {
-                        default:
-                            break;
-                        case OpCode.Handshake:
-                            ConnectedEvent.Invoke();
-                            break;
-                    }
-                }
-            });
-        }
 
-    }
-
-
-    internal class ServerSetup
-    {
-        public ServerSetup(IPAddress serverIP, int port, string globalPassword = "default", int maxChunkSize = 32)
-        {
-            ServerIP = serverIP;
-            Port = port;
-            GlobalPassword = globalPassword;
-            MaxChunkSize = maxChunkSize;
+            Console.WriteLine("[Heartbeat] Shutting down heartbeat.");
         }
-        public ServerSetup(int port, string globalPassword = "default", int maxChunkSize = 32)
-        {
-            ServerIP = IPAddress.Parse("127.0.0.1");
-            Port = port;
-            GlobalPassword = globalPassword;
-            MaxChunkSize = maxChunkSize;
-        }
-
-        public IPAddress ServerIP { get; }
-        public int Port { get; }
-        public string GlobalPassword { get; }
-        public int MaxChunkSize { get; }
-
     }
 }
+
+
+//NetworkStream stream = tcpClient.GetStream();
+//PacketReader reader = new PacketReader(stream); // your custom reader
+
+//try
+//{
+//    while (true)
+//    {
+//        // 1. Read opcode (1 byte)
+//        int opCode = stream.ReadByte();
+//        OpCode sentCode = (OpCode)opCode;
+
+//        //now we handle switching
+//        switch (sentCode)
+//        {
+
+
+
+
+//            case OpCode.Logout:
+//                Console.WriteLine($"Logout from {clientId.UID}");
+//                CleanUpClientSocket();
+//                return;
+
+//            // Add more opcodes as needed
+//            case OpCode.Unknown:
+//            default:
+//                
+//                return;
+//        }
+//    }
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine($"Error with {clientId.UID}: {ex.Message}");
+//}
+//finally
+//{
+//    CleanUpClientSocket();
+//}
+
+
+//        }

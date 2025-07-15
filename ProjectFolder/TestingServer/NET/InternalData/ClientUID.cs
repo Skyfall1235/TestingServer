@@ -1,20 +1,21 @@
 ﻿using System.Net.Sockets;
-namespace TestingServer
+
+namespace TestingServer.NET.InternalData
 {
-    public class Client
+    public class ClientUID
     {
         public string? UserName { get; set; }
         public Guid UID { get; set; }
         public TcpClient ClientSocket { get; set; }
         PacketReader m_reader;
-        public Client(TcpClient client)
+        public ClientUID(TcpClient client)
         {
             ClientSocket = client;
             UID = Guid.NewGuid();
             m_reader = new(ClientSocket.GetStream());
             var opCode = m_reader.ReadByte();
             //if we dont recognise the code, dump it immediately
-            bool ValidateOpCode = PacketTransportBase.byteToOpCode(opCode) != PacketTransportBase.OpCode.Unknown;
+            bool ValidateOpCode = IPacketTransportBase.byteToOpCode(opCode) != IPacketTransportBase.OpCode.Unknown;
             if (!ValidateOpCode)
             {
                 client.Close();//closes the connection imemdiately
