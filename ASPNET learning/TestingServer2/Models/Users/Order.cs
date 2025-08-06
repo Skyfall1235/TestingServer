@@ -15,6 +15,7 @@ namespace TestingServer2.Models.Users
     }
     public class Order
     {
+        public int Id { get; set; }
         // Link to the customer who placed the order
         public int CustomerId { get; set; }
 
@@ -30,21 +31,22 @@ namespace TestingServer2.Models.Users
         public decimal Total { get; set; }
 
         // Shipping and billing information
-        public CustomerAddress ShippingAddress { get; set; }
-        public CustomerAddress BillingAddress { get; set; }
+        public CustomerAddress? ShippingAddress { get; set; }
+        public required CustomerAddress BillingAddress { get; set; }
 
         // A list of the items that were purchased in this order
-        public List<OrderLineItem> LineItems { get; set; }
+        public required List<OrderLineItem> LineItems { get; set; }
     }
 
     public class OrderLineItem
     {
         // Link to the product that was ordered
+        public int id { get; set; }
         // We use the Product's public ID for consistency
         public Guid ProductPublicId { get; set; }
     
         // The name of the product at the time of purchase
-        public string ProductName { get; set; }
+        public required string ProductName { get; set; }
     
         // The unit price at the time of purchase
         public decimal PriceAtPurchase { get; set; }
@@ -56,7 +58,7 @@ namespace TestingServer2.Models.Users
         public decimal Total { get; set; }
     
         // Any customization notes for this specific item
-        public string CustomizationNotes { get; set; }
+        public string? CustomizationNotes { get; set; }
     }
 }
 
