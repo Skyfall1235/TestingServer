@@ -1,6 +1,6 @@
 ﻿using System.Collections.Concurrent;
-using TestingServer.NET.InternalData;
-using static TestingServer.NET.InternalData.IPacketTransportBase;
+using TestingServer.NET.InternalData.Depricated;
+using static TestingServer.NET.InternalData.Depricated.IPacketTransportBase;
 
 namespace TestingServer.NET.IO
 {

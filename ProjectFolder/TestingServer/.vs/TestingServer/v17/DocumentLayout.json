@@ -1,45 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\",
+  "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|Z:\\CommercialGit\\The-Mission\\Assets\\1 Scripts\\Character Scripts\\Class System\\Abilities\\MonoBehaviors\\Deployer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\io\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\io\\loginhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\clientside\\clientserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:clientside\\clientserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\clientconnectionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:clientconnectionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\io\\opcodehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\io\\opcodehandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\serversetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\serversetup.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\packetbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\packetbuilder.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\packetreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\packetreader.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\clientuid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\clientuid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|e:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\ipackettransportbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\ipackettransportbase.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -49,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -57,122 +34,55 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Deployer.cs",
-              "DocumentMoniker": "Z:\\CommercialGit\\The-Mission\\Assets\\1 Scripts\\Character Scripts\\Class System\\Abilities\\MonoBehaviors\\Deployer.cs",
-              "ToolTip": "Z:\\CommercialGit\\The-Mission\\Assets\\1 Scripts\\Character Scripts\\Class System\\Abilities\\MonoBehaviors\\Deployer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAxwAAAAAAAAAAA",
+              "DocumentIndex": 3,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "NET\\InternalData\\ConnectionManager.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ConnectionManager.cs",
+              "RelativeToolTip": "NET\\InternalData\\ConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-18T03:17:51.422Z",
+              "WhenOpened": "2025-07-15T22:06:49.777Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OpCodeHandler.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\IO\\OpCodeHandler.cs",
-              "RelativeDocumentMoniker": "NET\\IO\\OpCodeHandler.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\IO\\OpCodeHandler.cs",
-              "RelativeToolTip": "NET\\IO\\OpCodeHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAGsAAAAgAAAA",
+              "DocumentIndex": 2,
+              "Title": "Dispatcher.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Dispatcher.cs",
+              "RelativeDocumentMoniker": "Dispatcher.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Dispatcher.cs",
+              "RelativeToolTip": "Dispatcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-17T06:24:18.197Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ClientServer.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientSide\\ClientServer.cs",
-              "RelativeDocumentMoniker": "ClientSide\\ClientServer.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientSide\\ClientServer.cs",
-              "RelativeToolTip": "ClientSide\\ClientServer.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:24:49.459Z"
+              "WhenOpened": "2025-07-15T21:40:32.809Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "LoginHandler.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\IO\\LoginHandler.cs",
-              "RelativeDocumentMoniker": "NET\\IO\\LoginHandler.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\IO\\LoginHandler.cs",
-              "RelativeToolTip": "NET\\IO\\LoginHandler.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACoAAAANAAAA",
+              "Title": "ClientConnectionHandler.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientConnectionHandler.cs",
+              "RelativeDocumentMoniker": "ClientConnectionHandler.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientConnectionHandler.cs",
+              "RelativeToolTip": "ClientConnectionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:24:49.376Z"
+              "WhenOpened": "2025-07-15T21:40:01.704Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ServerSetup.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ServerSetup.cs",
-              "RelativeDocumentMoniker": "NET\\InternalData\\ServerSetup.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ServerSetup.cs",
-              "RelativeToolTip": "NET\\InternalData\\ServerSetup.cs",
-              "ViewState": "AQIAAAUAAAAAAAAAAAAxwBkAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T23:24:49.282Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IPacketTransportBase.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\IPacketTransportBase.cs",
-              "RelativeDocumentMoniker": "NET\\InternalData\\IPacketTransportBase.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\IPacketTransportBase.cs",
-              "RelativeToolTip": "NET\\InternalData\\IPacketTransportBase.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:15:27.793Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ClientUID.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ClientUID.cs",
-              "RelativeDocumentMoniker": "NET\\InternalData\\ClientUID.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ClientUID.cs",
-              "RelativeToolTip": "NET\\InternalData\\ClientUID.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAARAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:04:57.634Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "PacketReader.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\PacketReader.cs",
-              "RelativeDocumentMoniker": "NET\\InternalData\\PacketReader.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\PacketReader.cs",
-              "RelativeToolTip": "NET\\InternalData\\PacketReader.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:04:57.557Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "PacketBuilder.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\PacketBuilder.cs",
-              "RelativeDocumentMoniker": "NET\\InternalData\\PacketBuilder.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\PacketBuilder.cs",
-              "RelativeToolTip": "NET\\InternalData\\PacketBuilder.cs",
-              "ViewState": "AQIAACcAAAAAAAAAAAAwwDoAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T10:04:57.439Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
-              "DocumentMoniker": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAACYAAAAAAAAAAAAswDgAAAAgAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-16T07:41:20.564Z"
+              "WhenOpened": "2025-06-16T07:41:20.564Z",
+              "EditorCaption": ""
             }
           ]
         }

@@ -1,0 +1,90 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\clientconnectionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:clientconnectionhandler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\net\\internaldata\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:net\\internaldata\\connectionmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|h:\\privatecode\\testingserver\\projectfolder\\testingserver\\dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8FFEE61D-A852-4A3C-B603-3928B2A65198}|TestingServer.csproj|solutionrelative:dispatcher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ConnectionManager.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ConnectionManager.cs",
+              "RelativeDocumentMoniker": "NET\\InternalData\\ConnectionManager.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\NET\\InternalData\\ConnectionManager.cs",
+              "RelativeToolTip": "NET\\InternalData\\ConnectionManager.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAALAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T22:06:49.777Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Dispatcher.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Dispatcher.cs",
+              "RelativeDocumentMoniker": "Dispatcher.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Dispatcher.cs",
+              "RelativeToolTip": "Dispatcher.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T21:40:32.809Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ClientConnectionHandler.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientConnectionHandler.cs",
+              "RelativeDocumentMoniker": "ClientConnectionHandler.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\ClientConnectionHandler.cs",
+              "RelativeToolTip": "ClientConnectionHandler.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-15T21:40:01.704Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAFAAAAAAAAAAAAAwwBEAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-16T07:41:20.564Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

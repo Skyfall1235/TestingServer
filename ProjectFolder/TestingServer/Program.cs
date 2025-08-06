@@ -2,9 +2,10 @@
 using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
-using TestingServer.NET.InternalData;
+using System.Text;
+using TestingServer.NET.InternalData.Depricated;
 using TestingServer.NET.IO;
-using static TestingServer.NET.InternalData.IPacketTransportBase;
+using static TestingServer.NET.InternalData.Depricated.IPacketTransportBase;
 
 //TO DO
 /*
@@ -26,12 +27,12 @@ namespace TestingServer
     }
     internal class Program
     {
-        static TcpListener? listener;
+        static TcpListener? serverListener;
         static ServerSetup? m_setup;
         static LoginHandler loginHandler = new LoginHandler();
         public static readonly ConcurrentDictionary<string, ClientUID> ConnectedClients = new();
         //so i dont have to manually type it ever again
-        static async Task Main(string[] args)
+        static async Task Main()
         {
             //some basic code, then creating a place to lsiten from
             Console.WriteLine("Hello, World!");
@@ -49,21 +50,50 @@ namespace TestingServer
                 m_setup = new ServerSetup(RefVars.ip, RefVars.portIn);
             }
 
-            loginHandler.LoadFromFile();
-            listener = new(m_setup.ServerIP, m_setup.Port);
-            listener.Start();
+            //now i set up the server
+            serverListener = new(m_setup.ServerIP, m_setup.Port);
+            serverListener.Start();
 
-            using var cts = new CancellationTokenSource();
+            //main loop
+            Console.WriteLine("Now Accepting Clients");
+            while (true)
+            {
+                TcpClient client = await serverListener!.AcceptTcpClientAsync();
 
-            // Start server heartbeat
-            var heartbeatTask = HeartbeatAsync(TimeSpan.FromSeconds(10), cts.Token);
+                var thread = new Thread(() =>  { HandleClientAsync(client); });
+                thread.Start();
+            }
+        }
 
+        private static async Task HandleClientAsync(TcpClient client)
+        {
+            NetworkStream stream = client.GetStream();
+            string? message;
+            try
+            {
+                while (true)
+                {
+                    //read the message from the client
+                    byte[] buffer = new byte[1024];
+                    int byteRead = await stream.ReadAsync(buffer, 0, buffer.Length);
+                    if (byteRead == 0) break; //client disconnected
 
-            await AcceptClientsAsync();//begins asyncronously running accepting of clients
+                    message = Encoding.UTF8.GetString(buffer, 0, byteRead);
 
-            // Cancel the heartbeat and wait for it to finish
-            cts.Cancel();
-            await heartbeatTask;
+                    //basic response we can remove later
+                    byte[] response = Encoding.UTF8.GetBytes($"server: {message}");
+                    await stream.WriteAsync(response, 0, response.Length);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }
+            finally
+            {
+                client.Close();
+                Console.WriteLine("client disconnected");
+            }           
         }
 
 
@@ -71,7 +101,7 @@ namespace TestingServer
         {
             while (true)
             {
-                var client = await listener!.AcceptTcpClientAsync();
+                var client = await serverListener!.AcceptTcpClientAsync();
                 Console.WriteLine("Client connected");
 
                 ClientUID newClientUID = new(client);
@@ -123,45 +153,3 @@ namespace TestingServer
 }
 
 
-//NetworkStream stream = tcpClient.GetStream();
-//PacketReader reader = new PacketReader(stream); // your custom reader
-
-//try
-//{
-//    while (true)
-//    {
-//        // 1. Read opcode (1 byte)
-//        int opCode = stream.ReadByte();
-//        OpCode sentCode = (OpCode)opCode;
-
-//        //now we handle switching
-//        switch (sentCode)
-//        {
-
-
-
-
-//            case OpCode.Logout:
-//                Console.WriteLine($"Logout from {clientId.UID}");
-//                CleanUpClientSocket();
-//                return;
-
-//            // Add more opcodes as needed
-//            case OpCode.Unknown:
-//            default:
-//                
-//                return;
-//        }
-//    }
-//}
-//catch (Exception ex)
-//{
-//    Console.WriteLine($"Error with {clientId.UID}: {ex.Message}");
-//}
-//finally
-//{
-//    CleanUpClientSocket();
-//}
-
-
-//        }

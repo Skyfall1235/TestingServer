@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj": {}
+    "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj": {}
   },
   "projects": {
-    "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj": {
+    "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj",
+        "projectUniqueName": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj",
         "projectName": "TestingServer",
-        "projectPath": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj",
-        "packagesPath": "C:\\Users\\wyatt\\.nuget\\packages\\",
-        "outputPath": "E:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\obj\\",
+        "projectPath": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\TestingServer.csproj",
+        "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
+        "outputPath": "H:\\PrivateCode\\TestingServer\\ProjectFolder\\TestingServer\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\wyatt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,8 @@
           "enableAudit": "true",
           "auditLevel": "low",
           "auditMode": "direct"
-        }
+        },
+        "SdkAnalysisLevel": "9.0.300"
       },
       "frameworks": {
         "net8.0": {
@@ -65,7 +66,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.205/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,126 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\models\\leathermaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:models\\leathermaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\models\\threadmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:models\\threadmaterial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\models\\hardwarematerial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:models\\hardwarematerial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:models\\material.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:controllers\\userscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|h:\\privatecode\\testingserver\\aspnet learning\\testingserver2\\models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{395B3708-0B87-4A40-82C0-1F30C30E5199}|TestingServer2.csproj|solutionrelative:models\\product.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "LeatherMaterial.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\LeatherMaterial.cs",
+              "RelativeDocumentMoniker": "Models\\LeatherMaterial.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\LeatherMaterial.cs",
+              "RelativeToolTip": "Models\\LeatherMaterial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T01:52:55.689Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ThreadMaterial.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\ThreadMaterial.cs",
+              "RelativeDocumentMoniker": "Models\\ThreadMaterial.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\ThreadMaterial.cs",
+              "RelativeToolTip": "Models\\ThreadMaterial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T01:52:55.609Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HardwareMaterial.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\HardwareMaterial.cs",
+              "RelativeDocumentMoniker": "Models\\HardwareMaterial.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\HardwareMaterial.cs",
+              "RelativeToolTip": "Models\\HardwareMaterial.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T01:52:55.52Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Material.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\Material.cs",
+              "RelativeDocumentMoniker": "Models\\Material.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\Material.cs",
+              "RelativeToolTip": "Models\\Material.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T01:52:52.687Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Product.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\Product.cs",
+              "RelativeDocumentMoniker": "Models\\Product.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Models\\Product.cs",
+              "RelativeToolTip": "Models\\Product.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-06T01:29:21.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UsersController.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Controllers\\UsersController.cs",
+              "RelativeDocumentMoniker": "Controllers\\UsersController.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\TestingServer2\\Controllers\\UsersController.cs",
+              "RelativeToolTip": "Controllers\\UsersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-05T22:20:36.361Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

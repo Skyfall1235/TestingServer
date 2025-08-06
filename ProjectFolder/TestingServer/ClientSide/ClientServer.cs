@@ -1,6 +1,6 @@
 ﻿using System.Net.Sockets;
-using TestingServer.NET.InternalData;
-using static TestingServer.NET.InternalData.IPacketTransportBase;
+using TestingServer.NET.InternalData.Depricated;
+using static TestingServer.NET.InternalData.Depricated.IPacketTransportBase;
 
 
 namespace TestingServer.ClientSide
