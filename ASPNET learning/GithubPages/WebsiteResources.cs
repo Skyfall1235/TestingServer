@@ -1,37 +1,12 @@
-using System.Drawing;
-using System.Xml.Linq;
-using static WebsiteResources;
-//objectives for this API
-/* - Have a get HTTP request for the skills
- * - have a get request for the images?
- * - have a get request for the info?
- * - probably should have it all added together
- * - basically, we want this API to be able to supply info about my projects to my portfolio
- * in a manner that allows me to update it without needing a full redo and commit
- * 
- * Part 1 : data storage and retrieval
- * - categorize data about my showcase stuff
- * - be able to send that data in the appriate http chunks
- * 
- * Part 2 : adding new data to the site :)
- * - build an API key for secure access
- * - use API key to allow select post requests
- * 
- * part 3 : Saving data as files when the server needs to power down
- * -determine storage technique
- * -load existing data oin start up
- * -unload on shutdown
- * 
- * 
- * 
- */
+using GithubPage.Data.Skills;
+
 
 /// <summary>
 /// A static class that holds a collection of website projects.
 /// This class is designed to be a singleton, ensuring only one
 /// instance of the project list exists across the application.
 /// </summary>
-public class WebsiteResources
+public static class WebsiteResources
 {
     /// <summary>
     /// Gets or sets the static list of projects for the website.
@@ -40,22 +15,48 @@ public class WebsiteResources
     /// </summary>
     public static List<Project> Projects = new();
 
-    /// <summary>
-    /// Initializes a new instance of the <see cref="WebsiteResources"/> class.
-    /// This constructor ensures that the Projects list is initialized only once.
-    /// </summary>
-    public WebsiteResources() { }
+    public static List<GenericSkill> SkillsAndTech = new()
+    {
+        // Languages
+            new SkillLanguage("C#", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg"),
+            new SkillLanguage("C++", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg"),
+            new SkillLanguage("Python", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"),
+            new SkillLanguage("XML", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-plain.svg"),
+            new SkillLanguage("JSON", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-plain.svg"),
+
+            // Frameworks and Engines
+            new SkillFrameWorkAndEngine(".NET", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain.svg"),
+            new SkillFrameWorkAndEngine("Unity Engine", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"),
+            new SkillFrameWorkAndEngine("Unity Netcode", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"),
+            new SkillFrameWorkAndEngine("Unity DOTS", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg"),
+
+            // Tools and Platforms
+            new SkillToolsAndPlatforms("Visual Studio", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg"),
+            new SkillToolsAndPlatforms("Jira", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-plain.svg"),
+            new SkillToolsAndPlatforms("GitHub", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg"),
+            new SkillToolsAndPlatforms("GitHub Actions", "https://placehold.co/64x64/2d3748/e2e8f0?text=Actions"),
+            new SkillToolsAndPlatforms("Git LFS", "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"),
+
+            // Concepts and Methodologies
+            new SkillConceptsAndMethodologies("Object-Oriented Programming", "https://placehold.co/64x64/2d3748/e2e8f0?text=OOP"),
+            new SkillConceptsAndMethodologies("Agile Scrum", "https://placehold.co/64x64/2d3748/e2e8f0?text=Agile"),
+            new SkillConceptsAndMethodologies("DevOps", "https://placehold.co/64x64/2d3748/e2e8f0?text=DevOps"),
+
+            // Specialties
+            new SkillSpecialties("VR", "https://placehold.co/64x64/2d3748/e2e8f0?text=VR"),
+            new SkillSpecialties("VR Development", "https://placehold.co/64x64/2d3748/e2e8f0?text=VR")
+    };
 }
 
 /// <summary>
 /// Represents a single project for the website.
 /// A project is composed of a title, description, a list of associated
-/// skills, and a collection of content blocks.
+/// m_skills, and a collection of content blocks.
 /// </summary>
 public class Project
 {
     /// <summary>
-    /// Gets or sets the list of skills and technologies associated with the project.
+    /// Gets or sets the list of m_skills and technologies associated with the project.
     /// </summary>
     public SkillsAndTech SkillList { get; set; }
 
@@ -83,7 +84,7 @@ public class Project
     /// <summary>
     /// Initializes a new instance of the <see cref="Project"/> class.
     /// </summary>
-    /// <param name="skillList">The list of skills for the project.</param>
+    /// <param name="skillList">The list of m_skills for the project.</param>
     /// <param name="blocks">The initial list of info blocks for the project.</param>
     /// <param name="title">The title of the project.</param>
     /// <param name="description">The description of the project.</param>
@@ -99,13 +100,13 @@ public class Project
     /// Adds a new informational content block to the project.
     /// </summary>
     /// <param name="block">The info block to add.</param>
-    public void AddInfoblock(ContentBlock block) { Blocks.Add(block); }
+    public void AddContentblock(ContentBlock block) { Blocks.Add(block); }
 
     /// <summary>
     /// Removes an informational content block from the project.
     /// </summary>
     /// <param name="block">The info block to remove.</param>
-    public void RemoveInfoBlock(ContentBlock block) { Blocks.Remove(block); }
+    public void RemoveContentBlock(ContentBlock block) { Blocks.Remove(block); }
 }
 
 /// <summary>
@@ -196,6 +197,13 @@ public class CodeBlock : TextBlock
         text = newText;
         Subtitle = subtitleInfo;
         Datatype = dataTypeInfo;
+    }
+}
+
+public class ImageAndTextBlock : TextBlock
+{
+    public ImageAndTextBlock(int projectID, int blockID, string name, string newText) : base(projectID, blockID, name, newText)
+    {
     }
 }
 
