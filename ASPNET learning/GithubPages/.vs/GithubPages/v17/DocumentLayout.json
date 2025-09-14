@@ -3,20 +3,20 @@
   "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:data\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:data\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:data\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:data\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,52 +34,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "GenericSkill.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\GenericSkill.cs",
               "RelativeDocumentMoniker": "Data\\GenericSkill.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\GenericSkill.cs",
               "RelativeToolTip": "Data\\GenericSkill.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAuwDMAAAAEAAAAAAAAAA==",
+              "ViewState": "AgIAACwAAAAAAAAAAAAuwAMAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-14T07:50:10.664Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "SkillsAndTech.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\SkillsAndTech.cs",
               "RelativeDocumentMoniker": "Data\\SkillsAndTech.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\SkillsAndTech.cs",
               "RelativeToolTip": "Data\\SkillsAndTech.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAgwBwAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-14T07:34:15.424Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "WebsiteResources.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\WebsiteResources.cs",
               "RelativeDocumentMoniker": "WebsiteResources.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\WebsiteResources.cs",
               "RelativeToolTip": "WebsiteResources.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAdAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAAYwCkAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T14:51:00.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAIwB8AAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAEUAAAAAAAAAAAAAAGwAAAB7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T02:07:46.967Z",
               "EditorCaption": ""

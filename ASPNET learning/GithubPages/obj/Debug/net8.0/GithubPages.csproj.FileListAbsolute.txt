@@ -35,3 +35,4 @@ H:\PrivateCode\TestingServer\ASPNET learning\GithubPages\obj\Debug\net8.0\refint
 H:\PrivateCode\TestingServer\ASPNET learning\GithubPages\obj\Debug\net8.0\GithubPages.pdb
 H:\PrivateCode\TestingServer\ASPNET learning\GithubPages\obj\Debug\net8.0\GithubPages.genruntimeconfig.cache
 H:\PrivateCode\TestingServer\ASPNET learning\GithubPages\obj\Debug\net8.0\ref\GithubPages.dll
+H:\PrivateCode\TestingServer\ASPNET learning\GithubPages\bin\Debug\net8.0\GithubPages.staticwebassets.runtime.json

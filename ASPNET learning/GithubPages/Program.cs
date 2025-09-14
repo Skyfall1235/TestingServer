@@ -24,10 +24,56 @@ app.UseHttpsRedirection();
 
 //we can also design a resource for all the relevent m_skills i have used!
 
-//we should use app.use to inject middlware (basically to see if the source has an API key or something
-//do it above the  resources
-app.MapGet("/projects");
-app.MapGet("/skills");
+WebsiteResources resources = new WebsiteResources(); //so we can modify it at runtime if need be :)
+
+// Create an endpoint group for versioning or better organization
+var api = app.MapGroup("/api");
+
+// app.MapGet for the "/skills" endpoint
+app.MapGet("/skills", () =>
+{
+    // Map the GenericSkill objects to SkillDto objects and group them by category.
+    // This allows the API to return a string for the category instead of an integer.
+    var skills = WebsiteResources.SkillsAndTech
+        .Select(s => new SkillDTO(s.Name, s.ImageSource, s.SkillCategory?.ToString() ?? "Unknown"));
+    //like, we want toi group them but this puts them in multiple arrays which i do not want for the output
+        //.GroupBy(s => s.category);
+
+    return skills;
+});
+
+
+
+#region Project Gets
+// app.MapGet for the "/projects" endpoint
+app.MapGet("/projects", () =>
+{
+    // You'd populate this list with project data here.
+    // For now, it will return an empty list until you add projects.
+    return WebsiteResources.Projects;
+});
+
+// Add new endpoints for retrieving single items by ID
+api.MapGet("/projects/{index}", (int index) =>
+{
+    // Find a single project by ID.
+    // Replace this with a database call or proper data source.
+    if(WebsiteResources.Projects.Count > index)
+    {
+        return Results.NotFound();
+    }
+    var project = WebsiteResources.Projects[index];
+    return project != null ? Results.Ok(project) : Results.NotFound();
+});
+// Add a new endpoint for retrieving a single project by title
+api.MapGet("/projects/by-title/{title}", (string title) =>
+{
+    // Find a single project by title, using case-insensitive comparison.
+    var project = WebsiteResources.Projects.FirstOrDefault(p => p.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
+    return project != null ? Results.Ok(project) : Results.NotFound();
+});
+#endregion
+
 
 app.Run();
 
@@ -55,3 +101,9 @@ app.Run();
  * 
  * 
  */
+
+//WEBSITE MODIFICATIONS
+/*
+ * so we need a way to dynamically load the content that doesnt invole a modificatyion of the site every time
+ * what if we have 2 pages, the hero page, and a dynamic mpage, we can modify the headers and the URL will just be "projects"
+ * we direct people to that and hotload the info there. so 1 page for all projects. depening on whatyp roject is hotloaded!
