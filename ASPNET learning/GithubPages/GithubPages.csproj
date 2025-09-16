@@ -12,8 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ProgramLogic\" />
-    <Folder Include="wwwroot\" />
+    <Folder Include="Data\" />
+    <Folder Include="HTML\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\index.html" />
   </ItemGroup>
 
 </Project>

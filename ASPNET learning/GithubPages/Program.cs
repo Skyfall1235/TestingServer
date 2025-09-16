@@ -1,5 +1,6 @@
 using Microsoft.VisualBasic;
 using System.Drawing;
+using GithubPages.Data.Skills;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,14 +33,16 @@ var api = app.MapGroup("/api");
 // app.MapGet for the "/skills" endpoint
 app.MapGet("/skills", () =>
 {
-    // Map the GenericSkill objects to SkillDto objects and group them by category.
-    // This allows the API to return a string for the category instead of an integer.
-    var skills = WebsiteResources.SkillsAndTech
-        .Select(s => new SkillDTO(s.Name, s.ImageSource, s.SkillCategory?.ToString() ?? "Unknown"));
-    //like, we want toi group them but this puts them in multiple arrays which i do not want for the output
-        //.GroupBy(s => s.category);
+    // Convert the dictionary values into a list of SkillDTOs
+    var skillsList = WebsiteResources.SkillsAndTech.Skills.Values
+        .OrderBy(skill => skill.SkillCategory)
+        .Select(skill => new SkillDTO(
+        skill.Name, 
+        skill.ImageSource, 
+        skill.SkillCategory.ToString() ?? "Unknown"))
+        .ToList(); // Convert the result to a List
 
-    return skills;
+    return skillsList; // Return the list of SkillDTO objects
 });
 
 
@@ -74,7 +77,8 @@ api.MapGet("/projects/by-title/{title}", (string title) =>
 });
 #endregion
 
-
+app.UseDefaultFiles();
+app.UseStaticFiles();
 app.Run();
 
 //objectives for this API
@@ -107,3 +111,4 @@ app.Run();
  * so we need a way to dynamically load the content that doesnt invole a modificatyion of the site every time
  * what if we have 2 pages, the hero page, and a dynamic mpage, we can modify the headers and the URL will just be "projects"
  * we direct people to that and hotload the info there. so 1 page for all projects. depening on whatyp roject is hotloaded!
+*/
