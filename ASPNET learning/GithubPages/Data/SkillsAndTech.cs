@@ -1,6 +1,6 @@
-namespace GithubPages.Data.Skills
+namespace GithubPages.Data
 {
-    [System.Serializable]
+    [Serializable]
     public class SkillsAndTech
     {
         private Dictionary<string, GenericSkill> m_skills = new Dictionary<string, GenericSkill>();

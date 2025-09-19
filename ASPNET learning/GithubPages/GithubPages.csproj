@@ -7,12 +7,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="Services\SkillSaverService.cs" />
+    <Content Include="Services\WebsiteResources.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.18" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Data\" />
     <Folder Include="HTML\" />
   </ItemGroup>
 

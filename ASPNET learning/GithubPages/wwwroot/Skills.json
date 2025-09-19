@@ -1,0 +1,142 @@
+[
+  {
+    "Name": "C#",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/csharp/csharp-original.svg",
+    "SkillCategory": "Languages"
+  },
+  {
+    "Name": "C++",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/cplusplus/cplusplus-original.svg",
+    "SkillCategory": "Languages"
+  },
+  {
+    "Name": "Python",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+    "SkillCategory": "Languages"
+  },
+  {
+    "Name": "XML",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/xml/xml-plain.svg",
+    "SkillCategory": "Languages"
+  },
+  {
+    "Name": "JSON",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/json/json-plain.svg",
+    "SkillCategory": "Languages"
+  },
+  {
+    "Name": ".NET",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain.svg",
+    "SkillCategory": "FrameworkAndEngine"
+  },
+  {
+    "Name": "ASP.NET Core",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/dot-net/dot-net-plain.svg",
+    "SkillCategory": "FrameworkAndEngine"
+  },
+  {
+    "Name": "Unity Engine",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+    "SkillCategory": "FrameworkAndEngine"
+  },
+  {
+    "Name": "Unity Netcode",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+    "SkillCategory": "FrameworkAndEngine"
+  },
+  {
+    "Name": "Unity DOTS",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+    "SkillCategory": "FrameworkAndEngine"
+  },
+  {
+    "Name": "Visual Studio",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/visualstudio/visualstudio-plain.svg",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "Jira",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/jira/jira-plain.svg",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "GitHub",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "GitHub Actions",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=Actions",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "Git LFS",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "Object-Oriented Programming",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=OOP",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "Agile Scrum",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=Agile",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "DevOps",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=DevOps",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "VR",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=VR",
+    "SkillCategory": "Specialties"
+  },
+  {
+    "Name": "VR Development",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=VR",
+    "SkillCategory": "Specialties"
+  },
+  {
+    "Name": "Event-Driven Programming",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=Events",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "Component Driven Design",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=Components",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "Web Development",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=Web",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "API Design",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=API",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "Data Structures",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=DS",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "LINQ",
+    "ImageSource": "https://placehold.co/64x64/2d3748/e2e8f0?text=LINQ",
+    "SkillCategory": "ConceptsAndMethodologies"
+  },
+  {
+    "Name": "Git",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    "SkillCategory": "ToolsAndPlatforms"
+  },
+  {
+    "Name": "Unity VFX & Particle System",
+    "ImageSource": "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/unity/unity-original.svg",
+    "SkillCategory": "Specialties"
+  }
+]

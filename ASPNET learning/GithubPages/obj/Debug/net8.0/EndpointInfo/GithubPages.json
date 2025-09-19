@@ -72,6 +72,44 @@
         }
       }
     },
+    "/Links": {
+      "get": {
+        "tags": [
+          "GithubPages"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/HTML_Error"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/Links/Github": {
+      "get": {
+        "tags": [
+          "GithubPages"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "content": {
+              "text/plain": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/projects": {
       "get": {
         "tags": [
@@ -109,24 +147,6 @@
         "type": "integer",
         "format": "int32"
       },
-      "ContentBlock": {
-        "type": "object",
-        "properties": {
-          "projectID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "blockID": {
-            "type": "integer",
-            "format": "int32"
-          },
-          "name": {
-            "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
       "GenericSkill": {
         "type": "object",
         "properties": {
@@ -141,6 +161,20 @@
           },
           "skillCategory": {
             "$ref": "#/components/schemas/Category"
+          }
+        },
+        "additionalProperties": false
+      },
+      "HTML_Error": {
+        "type": "object",
+        "properties": {
+          "errorCode": {
+            "type": "integer",
+            "format": "int32"
+          },
+          "message": {
+            "type": "string",
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -160,16 +194,16 @@
             "type": "string",
             "nullable": true
           },
+          "growth": {
+            "type": "string",
+            "nullable": true
+          },
+          "projectOverview": {
+            "type": "string",
+            "nullable": true
+          },
           "skillList": {
             "$ref": "#/components/schemas/SkillsAndTech"
-          },
-          "infoBlocks": {
-            "type": "array",
-            "items": {
-              "$ref": "#/components/schemas/ContentBlock"
-            },
-            "nullable": true,
-            "readOnly": true
           }
         },
         "additionalProperties": false

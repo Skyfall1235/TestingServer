@@ -1,1 +1,3 @@
+wwwroot\contentServer.html
 wwwroot\index.html
+wwwroot\projects.json

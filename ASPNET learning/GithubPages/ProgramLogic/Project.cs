@@ -1,5 +1,3 @@
-using GithubPages.Data.Skills;
-
 namespace GithubPages.Data.Projects
 {
     /// <summary>
@@ -11,32 +9,20 @@ namespace GithubPages.Data.Projects
     public class Project
     {
         private string title;
-
-        /// <summary>
-        /// Gets the title of the project.
-        /// </summary>
-        public string Title { get => title; }
-
+        public string Title => title;
         private string description;
-
-        /// <summary>
-        /// Gets the description of the project.
-        /// </summary>
-        public string Description { get => description; }
-
+        public string Description => description;
         private string titleCardURL;
         public string TitleCardURL => titleCardURL;
+        private string growth;
+        public string Growth => growth;
+        private string projectOverview;
+        public string ProjectOverview => projectOverview;
 
         /// <summary>
         /// Gets or sets the list of m_skills and technologies associated with the project.
         /// </summary>
         public SkillsAndTech SkillList { get; set; }
-
-        private List<ContentBlock> Blocks = new();
-        /// <summary>
-        /// Gets a read-only list of informational content blocks for the project.
-        /// </summary>
-        public IReadOnlyList<ContentBlock> InfoBlocks => Blocks;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Project"/> class.
@@ -45,26 +31,18 @@ namespace GithubPages.Data.Projects
         /// <param name="blocks">The initial list of info blocks for the project.</param>
         /// <param name="title">The title of the project.</param>
         /// <param name="description">The description of the project.</param>
-        public Project(SkillsAndTech skillList, List<ContentBlock> blocks, string title, string description, string titleCardURL)
+        /// <param name="titleCardURL">The URL for the project's title card image.</param>
+        /// <param name="growth">The text describing professional growth from the project.</param>
+        /// <param name="projectOverview">The text providing a general overview of the project.</param>
+        public Project(SkillsAndTech skillList, string title, string description, string titleCardURL, string growth, string projectOverview)
         {
             SkillList = skillList;
-            Blocks = blocks;
             this.title = title;
             this.description = description;
             this.titleCardURL = titleCardURL;
+            this.growth = growth;
+            this.projectOverview = projectOverview;
         }
-
-        /// <summary>
-        /// Adds a new informational content block to the project.
-        /// </summary>
-        /// <param name="block">The info block to add.</param>
-        public void AddContentblock(ContentBlock block) { Blocks.Add(block); }
-
-        /// <summary>
-        /// Removes an informational content block from the project.
-        /// </summary>
-        /// <param name="block">The info block to remove.</param>
-        public void RemoveContentBlock(ContentBlock block) { Blocks.Remove(block); }
     }
 }
 

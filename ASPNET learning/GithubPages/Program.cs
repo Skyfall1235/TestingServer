@@ -1,6 +1,6 @@
-using Microsoft.VisualBasic;
-using System.Drawing;
-using GithubPages.Data.Skills;
+using GithubPages.Data;
+using GithubPages.Services;
+using Microsoft.AspNetCore.RateLimiting;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +8,10 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+//saving services
+builder.Services.AddSingleton<SkillSaverService>();
+builder.Services.AddSingleton<ProjectSaverService>();
+RateLimiterOptions options = new();
 
 var app = builder.Build();
 
@@ -26,6 +30,12 @@ app.UseHttpsRedirection();
 //we can also design a resource for all the relevent m_skills i have used!
 
 WebsiteResources resources = new WebsiteResources(); //so we can modify it at runtime if need be :)
+//load all project data in
+WebsiteResources.Projects = WebsiteResources.LoadProjectsFromJson("wwwroot/projects.json");
+List<GenericSkill> allSkills = WebsiteResources.PullSkillsFromOpenProjects(WebsiteResources.Projects);
+//load all skills FROM the projects into the json, and then add al lthe skills to the global list
+WebsiteResources.SaveSkillsToJson(allSkills, "wwwroot/Skills.json");
+WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson("wwwroot/Skills.json"), true);
 
 // Create an endpoint group for versioning or better organization
 var api = app.MapGroup("/api");
@@ -45,14 +55,22 @@ app.MapGet("/skills", () =>
     return skillsList; // Return the list of SkillDTO objects
 });
 
+app.MapGet("/Links", () =>
+{
+//ill come back to this later :)
+    return CommonErrors.NoContent;
+});
+app.MapGet("/Links/Github", () =>
+{
+    return WebsiteResources.GithubProfile;
+});
+
 
 
 #region Project Gets
 // app.MapGet for the "/projects" endpoint
 app.MapGet("/projects", () =>
 {
-    // You'd populate this list with project data here.
-    // For now, it will return an empty list until you add projects.
     return WebsiteResources.Projects;
 });
 
@@ -79,6 +97,7 @@ api.MapGet("/projects/by-title/{title}", (string title) =>
 
 app.UseDefaultFiles();
 app.UseStaticFiles();
+
 app.Run();
 
 //objectives for this API

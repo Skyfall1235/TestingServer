@@ -1,4 +1,4 @@
-﻿namespace GithubPages.Data.Skills
+﻿namespace GithubPages.Data
 {
     [Serializable]
     public class GenericSkill

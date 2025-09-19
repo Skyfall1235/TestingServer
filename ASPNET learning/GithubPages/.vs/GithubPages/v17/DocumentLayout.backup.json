@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\html_error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\html_error.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -11,24 +27,20 @@
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\genericskill.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\contentserver.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\contentserver.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\programlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:programlogic\\project.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
   ],
   "DocumentGroupContainers": [
@@ -38,7 +50,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 6,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,13 +58,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
+              "Title": "projects.json",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\projects.json",
+              "RelativeDocumentMoniker": "wwwroot\\projects.json",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\projects.json",
+              "RelativeToolTip": "wwwroot\\projects.json",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAFoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-09-19T06:20:09.428Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "contentServer.html",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\contentServer.html",
+              "RelativeDocumentMoniker": "wwwroot\\contentServer.html",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\contentServer.html",
+              "RelativeToolTip": "wwwroot\\contentServer.html",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAIwFsAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-09-16T17:53:16.126Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "index.html",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\index.html",
               "RelativeToolTip": "wwwroot\\index.html",
-              "ViewState": "AgIAALcAAAAAAAAAAAAgwO8AAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAANYAAAAAAAAAAAAAANcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2025-09-15T23:48:44.006Z",
               "EditorCaption": ""
@@ -65,7 +103,7 @@
               "RelativeDocumentMoniker": "ProgramLogic\\Project.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\Project.cs",
               "RelativeToolTip": "ProgramLogic\\Project.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAAIwEMAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwC4AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-15T23:45:25.68Z",
               "EditorCaption": ""
@@ -73,32 +111,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "ContentBlock.cs",
-              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\ContentBlock.cs",
-              "RelativeDocumentMoniker": "ProgramLogic\\ContentBlock.cs",
-              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\ContentBlock.cs",
-              "RelativeToolTip": "ProgramLogic\\ContentBlock.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEQAAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-15T20:27:56.034Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "GenericSkill.cs",
-              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\GenericSkill.cs",
-              "RelativeDocumentMoniker": "ProgramLogic\\GenericSkill.cs",
-              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\GenericSkill.cs",
-              "RelativeToolTip": "ProgramLogic\\GenericSkill.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAA4wDEAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-14T07:50:10.664Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
               "Title": "SkillsAndTech.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\SkillsAndTech.cs",
               "RelativeDocumentMoniker": "ProgramLogic\\SkillsAndTech.cs",
@@ -111,28 +123,67 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "WebsiteResources.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\WebsiteResources.cs",
               "RelativeDocumentMoniker": "ProgramLogic\\WebsiteResources.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\WebsiteResources.cs",
               "RelativeToolTip": "ProgramLogic\\WebsiteResources.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAAAFkAAAAKAAAAAAAAAA==",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAwwN4AAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T14:51:00.481Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
+              "Title": "GenericSkill.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\GenericSkill.cs",
+              "RelativeDocumentMoniker": "ProgramLogic\\GenericSkill.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\GenericSkill.cs",
+              "RelativeToolTip": "ProgramLogic\\GenericSkill.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAmwDEAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-14T07:50:10.664Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Program.cs",
               "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAiwCUAAAAtAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAgwBcAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-09-13T02:07:46.967Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ContentBlock.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\ContentBlock.cs",
+              "RelativeDocumentMoniker": "ProgramLogic\\ContentBlock.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\ContentBlock.cs",
+              "RelativeToolTip": "ProgramLogic\\ContentBlock.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-15T20:27:56.034Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "HTML_Error.cs",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\HTML_Error.cs",
+              "RelativeDocumentMoniker": "ProgramLogic\\HTML_Error.cs",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\HTML_Error.cs",
+              "RelativeToolTip": "ProgramLogic\\HTML_Error.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAqwAEAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-16T18:10:11.014Z",
               "EditorCaption": ""
             }
           ]
