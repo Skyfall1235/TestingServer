@@ -5,14 +5,14 @@
     "version": "1.0"
   },
   "paths": {
-    "/api/projects/{index}": {
+    "/api/projects/{id}": {
       "get": {
         "tags": [
           "GithubPages"
         ],
         "parameters": [
           {
-            "name": "index",
+            "name": "id",
             "in": "path",
             "required": true,
             "schema": {
@@ -135,36 +135,6 @@
   },
   "components": {
     "schemas": {
-      "Category": {
-        "enum": [
-          0,
-          1,
-          2,
-          3,
-          4,
-          5
-        ],
-        "type": "integer",
-        "format": "int32"
-      },
-      "GenericSkill": {
-        "type": "object",
-        "properties": {
-          "name": {
-            "type": "string",
-            "nullable": true
-          },
-          "imageSource": {
-            "type": "string",
-            "nullable": true,
-            "readOnly": true
-          },
-          "skillCategory": {
-            "$ref": "#/components/schemas/Category"
-          }
-        },
-        "additionalProperties": false
-      },
       "HTML_Error": {
         "type": "object",
         "properties": {
@@ -182,6 +152,10 @@
       "Project": {
         "type": "object",
         "properties": {
+          "id": {
+            "type": "integer",
+            "format": "int32"
+          },
           "title": {
             "type": "string",
             "nullable": true
@@ -202,8 +176,12 @@
             "type": "string",
             "nullable": true
           },
-          "skillList": {
-            "$ref": "#/components/schemas/SkillsAndTech"
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "nullable": true
           }
         },
         "additionalProperties": false
@@ -221,19 +199,6 @@
           },
           "category": {
             "type": "string",
-            "nullable": true
-          }
-        },
-        "additionalProperties": false
-      },
-      "SkillsAndTech": {
-        "type": "object",
-        "properties": {
-          "skills": {
-            "type": "object",
-            "additionalProperties": {
-              "$ref": "#/components/schemas/GenericSkill"
-            },
             "nullable": true
           }
         },

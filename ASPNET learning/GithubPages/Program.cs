@@ -1,6 +1,8 @@
 using GithubPages.Data;
 using GithubPages.Services;
 using Microsoft.AspNetCore.RateLimiting;
+using GithubPages.Data.Projects;
+using System;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -32,10 +34,36 @@ app.UseHttpsRedirection();
 WebsiteResources resources = new WebsiteResources(); //so we can modify it at runtime if need be :)
 //load all project data in
 WebsiteResources.Projects = WebsiteResources.LoadProjectsFromJson("wwwroot/projects.json");
-List<GenericSkill> allSkills = WebsiteResources.PullSkillsFromOpenProjects(WebsiteResources.Projects);
+List<string> allSkills = WebsiteResources.Projects.SelectMany(p => p.Skills).Distinct().ToList();
+
+Console.WriteLine("Loading all Skills as Strings");
+foreach (var skill in allSkills)
+{
+    Console.WriteLine("prepped Skill: " + skill.ToString());
+}
+
+List<GenericSkill> skills = WebsiteResources.LoadSkillsFromJson("wwwroot/Skills.json");
+Console.WriteLine(skills.Count);
+WebsiteResources.SkillsAndTech.BatchAddSkills(skills, true);
+
+Console.WriteLine("Loading all Skills from file");
+foreach (GenericSkill skill in WebsiteResources.SkillsAndTech.Skills.Values)
+{
+    Console.WriteLine("Loaded Skill: " + skill.Name + " with category: " + skill.SkillCategory.ToString());
+}
+
+//add the sdkilsl to the global thing now :)
+WebsiteResources.SkillsAndTech.BatchAddSkills(allSkills);
+
+Console.WriteLine("adding new skills");
+foreach (GenericSkill skill in WebsiteResources.SkillsAndTech.Skills.Values)
+{
+    Console.WriteLine("Loaded Skill: " + skill.Name + " with category: " + skill.SkillCategory.ToString());
+}
+
 //load all skills FROM the projects into the json, and then add al lthe skills to the global list
-WebsiteResources.SaveSkillsToJson(allSkills, "wwwroot/Skills.json");
-WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson("wwwroot/Skills.json"), true);
+//WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/Skills.json");
+//WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson("wwwroot/skills.json"), true);
 
 // Create an endpoint group for versioning or better organization
 var api = app.MapGroup("/api");
@@ -75,21 +103,17 @@ app.MapGet("/projects", () =>
 });
 
 // Add new endpoints for retrieving single items by ID
-api.MapGet("/projects/{index}", (int index) =>
+api.MapGet("/projects/{id}", (int id) =>
 {
-    // Find a single project by ID.
-    // Replace this with a database call or proper data source.
-    if(WebsiteResources.Projects.Count > index)
-    {
-        return Results.NotFound();
-    }
-    var project = WebsiteResources.Projects[index];
+    var project = WebsiteResources.Projects .FirstOrDefault(p => p.Id == id);
+
     return project != null ? Results.Ok(project) : Results.NotFound();
 });
-// Add a new endpoint for retrieving a single project by title
+
+// Add a new endpoint for retrieving a single project by m_title
 api.MapGet("/projects/by-title/{title}", (string title) =>
 {
-    // Find a single project by title, using case-insensitive comparison.
+    // Find a single project by m_title, using case-insensitive comparison.
     var project = WebsiteResources.Projects.FirstOrDefault(p => p.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
     return project != null ? Results.Ok(project) : Results.NotFound();
 });

@@ -1,4 +1,6 @@
-﻿namespace GithubPages.Data
+﻿using System.Text.Json.Serialization;
+
+namespace GithubPages.Data
 {
     [Serializable]
     public class GenericSkill
@@ -10,10 +12,20 @@
             SkillCategory = skillCategory;
 
         }
+        // Parameterless constructor needed for deserialization
+        public GenericSkill()
+        {
+        }
 
-        public string Name { get; }
-        public string ImageSource { get; }
-        public Category? SkillCategory { get; }
+
+        [JsonPropertyName("Name")]
+        public string Name { get; set; }
+
+        [JsonPropertyName("ImageSource")]
+        public string ImageSource { get; set; }
+
+        [JsonPropertyName("SkillCategory")]
+        public Category? SkillCategory { get; set; }
 
         /// <summary>
         /// Determines whether the specified object is equal to the current object.
@@ -42,7 +54,6 @@
 
         public enum Category
         {
-            
             Languages,
             FrameworkAndEngine,
             ToolsAndPlatforms,

@@ -1,90 +1,89 @@
 [
   {
+    "id": 0,
     "title": "Style Studio Work",
     "description": "Developed and maintained features for multiplayer VR games, including implementing Unity Netcode for GameObjects, optimizing performance with Unity ECS for Quest 2, and designing scalable inventory systems. Also created in-game tools for designers.",
     "titleCardURL": "",
     "growth": "My work significantly contributed to the studio's first multiplayer VR title, ensuring robust networking, high performance on target platforms like Quest 2, and efficient content pipelines for designers. I focused on creating modular and maintainable codebases to facilitate rapid iteration and feature expansion.",
     "projectOverview": "Oversaw the integration of new features into existing game architecture.\r\nMentored junior developers, providing hands-on learning and constructive feedback.\r\nDeveloped and maintained core game features ensuring high performance and responsiveness.\r\nImplemented networking solutions using Unity Netcode for GameObjects for seamless multiplayer.\r\nEnhanced performance through Unity ECS design, optimizing gameplay on Quest 2.\r\nDesigned scalable inventory and item systems for diverse in-game assets.\r\nCreated in-game tools for designers, streamlining scriptable object editing.",
-    "skillList": {
-      "skills": [
-        { "name": "C#" },
-        { "name": "Unity Engine" },
-        { "name": "Unity Netcode" },
-        { "name": "Unity DOTS" },
-        { "name": "Visual Studio" },
-        { "name": "Jira" },
-        { "name": "GitHub" },
-        { "name": "GitHub Actions" },
-        { "name": "Git LFS" },
-        { "name": "Object-Oriented Programming" },
-        { "name": "Agile Scrum" },
-        { "name": "DevOps" },
-        { "name": "VR" },
-        { "name": "VR Development" }
-      ]
-    }
+    "skills": [
+      "C#",
+      "Unity Engine",
+      "Unity Netcode",
+      "Unity DOTS",
+      "Visual Studio",
+      "Jira",
+      "GitHub",
+      "GitHub Actions",
+      "Git LFS",
+      "Object-Oriented Programming",
+      "Agile Scrum",
+      "DevOps",
+      "VR",
+      "VR Development"
+    ]
   },
   {
+    "id": 1,
     "title": "One Week Tanks",
     "description": "A collaborative personal project focused on Unity's Peer-to-Peer networking, developed within a one-week constraint. Features real-time tank combat, synced events, and a dynamic kill feed.",
     "titleCardURL": "",
     "growth": "This project was an intensive learning experience, significantly deepening my understanding of Unity's Netcode for GameObjects and general networking principles in a real-time multiplayer context. I also gained valuable hands-on experience with Unity's VFX and particle systems, and reinforced my skills in event-driven programming.",
     "projectOverview": "Designed a functional main menu for game entry.\r\nImplemented a simple username and IP login system for peer-to-peer connection.\r\nDeveloped randomized player spawning for varied match starts.\r\nCreated responsive tank movement controls.\r\nIntegrated tank shooting mechanics.\r\nDesigned VFX for projectile trails to enhance visual feedback.\r\nEnsured synced player spawns, shots, and deaths across the network.\r\nImplemented a real-time kill feed displaying who killed whom.",
-    "skillList": {
-      "skills": [
-        { "name": "Unity Engine" },
-        { "name": "C#" },
-        { "name": "Visual Studio" },
-        { "name": "Unity Netcode" },
-        { "name": "GitHub" },
-        { "name": "Git LFS" },
-        { "name": "Event-Driven Programming" },
-        { "name": "Object-Oriented Programming" },
-        { "name": "Unity VFX & Particle System" }
-      ]
-    }
+    "skills": [
+      "Unity Engine",
+      "C#",
+      "Visual Studio",
+      "Unity Netcode",
+      "GitHub",
+      "Git LFS",
+      "Event-Driven Programming",
+      "Object-Oriented Programming",
+      "Unity VFX & Particle System"
+    ]
   },
   {
+    "id": 2,
     "title": "Project VRS",
     "description": "An independent VR project featuring an immersive spacecraft flight control system with dual-joystick functionality, real-time subsystem management, and physics-simulated 3D controls. Includes dynamic combat environments with customizable enemy waves and positional tracking turrets.",
     "titleCardURL": "",
     "growth": "This project was a significant learning experience, allowing me to dive deep into complex game systems and VR interactions. It honed my problem-solving skills and my ability to work with advanced Unity features and mathematical concepts crucial for realistic simulations.",
     "projectOverview": "Developed an immersive flight control system for VR spacecraft with comprehensive dual-joystick functionality.\r\nImplemented real-time management of subsystems like targeting and power delivery.\r\nCollaborated on a physics-simulated flight system with 3D controls for enhanced realism.\r\nDesigned and implemented dynamic combat environments with waves of enemies, customizable missions, and unique factions.\r\nIntegrated positional tracking turrets and missiles for improved accuracy and interactivity.",
-    "skillList": {
-      "skills": [
-        { "name": "C#" },
-        { "name": "Unity Engine" },
-        { "name": "Unity DOTS" },
-        { "name": "Visual Studio" },
-        { "name": "Event-Driven Programming" },
-        { "name": "Object-Oriented Programming" },
-        { "name": "Component Driven Design" },
-        { "name": "Git LFS" },
-        { "name": "VR" },
-        { "name": "VR Development" }
-      ]
-    }
+    "skills": [
+      "C#",
+      "Unity Engine",
+      "Unity DOTS",
+      "Visual Studio",
+      "Event-Driven Programming",
+      "Object-Oriented Programming",
+      "Component Driven Design",
+      "GitHub",
+      "Git LFS",
+      "VR",
+      "VR Development"
+    ]
   },
   {
-    "title": "Custom Github Pages API",
+    "id": 3,
+    "title": "Custom GitHub Pages API",
     "description": "A minimal ASP.NET Core API developed to serve as a dynamic backend for a portfolio website. This project provides RESTful endpoints for retrieving project details, skills, and other showcase content. It's designed to allow for easy content updates without requiring a full website redeployment, enabling efficient management of the portfolio's data.",
     "titleCardURL": "",
     "growth": "By building this project, I gained practical experience in several key areas. I solidified my understanding of C# and Object-Oriented Programming (OOP) by designing clear data structures to model the website's content.\r\nI also delved into ASP.NET Core and API Design, learning how to create RESTful endpoints that efficiently retrieve and serve data. The project also reinforced my knowledge of JSON, as it's the primary format for data exchange, and Data Structures for organizing the information. The use of LINQ was crucial for querying and filtering the data.\r\nFinally, I honed my skills in Git and version control, which were essential for managing the codebase and collaborating on the project. This experience provided valuable insight into creating dynamic, data-driven applications even within the constraints of a static site hosting environment like GitHub Pages.",
     "projectOverview": "This project is a minimal ASP.NET Core API created to function as a dynamic backend for a personal portfolio website. The core purpose is to provide RESTful endpoints that can serve project details, skills, and other showcase content. This design allows for efficient content management and updates without requiring a full website redeployment, streamlining the process of keeping the portfolio's data current.",
-    "skillList": {
-      "skills": [
-        { "name": "C#" },
-        { "name": "Visual Studio" },
-        { "name": "Event-Driven Programming" },
-        { "name": "Object-Oriented Programming" },
-        { "name": "ASP.NET Core" },
-        { "name": "Web Development" },
-        { "name": "API Design" },
-        { "name": "JSON" },
-        { "name": "Data Structures" },
-        { "name": "LINQ" },
-        { "name": "Git" }
-      ]
-    }
+    "skills": [
+      "C#",
+      "JavaScript",
+      "GitHub",
+      "Visual Studio",
+      "Event-Driven Programming",
+      "Object-Oriented Programming",
+      "ASP.NET Core",
+      "Web Development",
+      "API Design",
+      "JSON",
+      "Data Structures",
+      "LINQ",
+      "Git"
+    ]
   }
 ]

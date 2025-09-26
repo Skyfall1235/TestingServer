@@ -13,12 +13,17 @@ public class WebsiteResources
     public static List<Project> Projects = new();
     public static SkillsAndTech SkillsAndTech = new SkillsAndTech();
     public static string GithubProfile = "https://github.com/Skyfall1235";
+    static JsonSerializerOptions options = new JsonSerializerOptions
+    {
+        WriteIndented = true,
+        DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
+    };
 
     /// <summary>
-    /// Loads a list of Project objects from a JSON file.
+    /// Loads a list of Project objects from a JSON file at the specified file path.
     /// </summary>
     /// <param name="filePath">The path to the JSON file.</param>
-    /// <returns>A list of projects, or an empty list if the file cannot be loaded.</returns>
+    /// <returns>A list of Project objects, or an empty list if an error occurs.</returns>
     public static List<Project> LoadProjectsFromJson(string filePath)
     {
         // Use a try-catch block for robust file handling
@@ -27,8 +32,24 @@ public class WebsiteResources
             // Read all text from the file
             string jsonString = File.ReadAllText(filePath);
 
+            // Set up deserialization options, including case-insensitivity
+            var options = new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+            };
+
             // Deserialize the JSON string into a list of Project objects
-            var projects = JsonSerializer.Deserialize<List<Project>>(jsonString);
+            var projects = JsonSerializer.Deserialize<List<Project>>(jsonString, options);
+
+            // This is for demonstration purposes.
+            if (projects != null)
+            {
+                foreach (Project project in projects)
+                {
+                    Console.WriteLine($"Project Loaded: " + project?.Title);
+                }
+            }
+
 
             // Return the list, or a new empty list if deserialization fails
             return projects ?? new List<Project>();
@@ -58,13 +79,6 @@ public class WebsiteResources
     {
         try
         {
-            // Configure the serializer to use a clean, readable format.
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            };
-
             // Serialize the list of projects to a JSON string
             string jsonString = JsonSerializer.Serialize(projects, options);
 
@@ -119,12 +133,6 @@ public class WebsiteResources
     {
         try
         {
-            var options = new JsonSerializerOptions
-            {
-                WriteIndented = true,
-                DefaultIgnoreCondition = JsonIgnoreCondition.WhenWritingNull
-            };
-
             string jsonString = JsonSerializer.Serialize(skills, options);
             File.WriteAllText(filePath, jsonString);
             Console.WriteLine($"Successfully saved skill data to '{filePath}'.");
@@ -133,16 +141,6 @@ public class WebsiteResources
         {
             Console.WriteLine($"An error occurred while saving the file: {ex.Message}");
         }
-    }
-
-    public static List<GenericSkill> PullSkillsFromOpenProjects(List<Project> allProjects)
-    {
-        List<GenericSkill> allSkillList = new List<GenericSkill>();
-        foreach (Project project in allProjects)
-        {
-            allSkillList.AddRange(project.SkillList.Skills.Values.ToList());
-        }
-        return allSkillList;
     }
     public WebsiteResources() { }
 }

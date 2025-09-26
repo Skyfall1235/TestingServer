@@ -17,15 +17,8 @@ namespace GithubPages.Services
 
         private void OnApplicationStopping()
         {
-            // Define the path to your skills.json file
-            // You would get this from configuration or another injected service
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "skills.json");
-
             // Example: Get your list of skills here (this would come from a data source)
-            var skillsToSave = new List<GenericSkill>(); // Replace with your actual skills list
-
-            // Call your static method to save the data
-            WebsiteResources.SaveSkillsToJson(skillsToSave, filePath);
+            WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/Skills.json");
         }
     }
     public class ProjectSaverService
@@ -42,15 +35,8 @@ namespace GithubPages.Services
 
         private void OnApplicationStopping()
         {
-            // Define the path to your skills.json file
-            // You would get this from configuration or another injected service
-            string filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "projects.json");
-
-            // Example: Get your list of skills here (this would come from a data source)
-            var projectsToSave = new List<Project>(); // Replace with your actual skills list
-
             // Call your static method to save the data
-            WebsiteResources.SaveProjectsToJson(projectsToSave, filePath);
+            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/projects.json");
         }
     }
 }

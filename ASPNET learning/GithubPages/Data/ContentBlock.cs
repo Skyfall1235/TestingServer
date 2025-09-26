@@ -42,7 +42,7 @@ public abstract class ContentBlock
 public class TextBlock : ContentBlock
 {
     /// <summary>
-    /// Optional title for a text card.
+    /// Optional m_title for a text card.
     /// </summary>
     public string? Title { get; set; }
     /// <summary>
