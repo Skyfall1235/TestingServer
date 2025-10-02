@@ -3,6 +3,22 @@
   "WorkspaceRootPath": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\admin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\admin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\activedata\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\activedata\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\activedata\\skills.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\activedata\\skills.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\services\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:services\\authorization.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -27,10 +43,6 @@
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\activedata\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\activedata\\projects.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\services\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:services\\websiteresources.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -41,14 +53,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:data\\contentblock.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\activedata\\skills.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\activedata\\skills.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\wwwroot\\admin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|solutionrelative:wwwroot\\admin.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{DB01F29E-142F-4893-B529-18AAB38513DB}|GithubPages.csproj|h:\\privatecode\\testingserver\\aspnet learning\\githubpages\\data\\skillsandtech.cs||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -70,15 +74,28 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "projects.json",
+              "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\projects.json",
+              "RelativeDocumentMoniker": "wwwroot\\projects.json",
+              "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\projects.json",
+              "RelativeToolTip": "wwwroot\\projects.json",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAFcAAAADAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-10-02T08:06:08.241Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 7,
               "Title": "launchSettings.json",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "Properties\\launchSettings.json",
@@ -91,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "appsettings.json",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\appsettings.json",
               "RelativeDocumentMoniker": "appsettings.json",
@@ -104,20 +121,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Authorization.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Services\\Authorization.cs",
               "RelativeDocumentMoniker": "Services\\Authorization.cs",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Services\\Authorization.cs",
               "RelativeToolTip": "Services\\Authorization.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCYAAAAgAAAAAAAAAA==",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwCAAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-01T15:20:35.661Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 1,
               "Title": "Admin.html",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\Admin.html",
               "RelativeDocumentMoniker": "wwwroot\\Admin.html",
@@ -130,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 11,
               "Title": "SkillSaverService.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Services\\SkillSaverService.cs",
               "RelativeDocumentMoniker": "Services\\SkillSaverService.cs",
@@ -143,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "Skills.json",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\ActiveData\\Skills.json",
               "RelativeDocumentMoniker": "wwwroot\\ActiveData\\Skills.json",
@@ -156,20 +173,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "projects.json",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\ActiveData\\projects.json",
               "RelativeDocumentMoniker": "wwwroot\\ActiveData\\projects.json",
               "ToolTip": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\ActiveData\\projects.json",
               "RelativeToolTip": "wwwroot\\ActiveData\\projects.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAAAIAAAAHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
               "WhenOpened": "2025-09-19T06:20:09.428Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "index.html",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\wwwroot\\index.html",
               "RelativeDocumentMoniker": "wwwroot\\index.html",
@@ -182,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 6,
               "Title": "Project.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\ProgramLogic\\Project.cs",
               "RelativeDocumentMoniker": "ProgramLogic\\Project.cs",
@@ -195,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "SkillsAndTech.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\SkillsAndTech.cs",
               "RelativeDocumentMoniker": "Data\\SkillsAndTech.cs",
@@ -207,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 10,
               "Title": "WebsiteResources.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Services\\WebsiteResources.cs",
               "RelativeDocumentMoniker": "Services\\WebsiteResources.cs",
@@ -220,7 +237,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "GenericSkill.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\GenericSkill.cs",
               "RelativeDocumentMoniker": "Data\\GenericSkill.cs",
@@ -232,7 +249,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
@@ -245,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 12,
               "Title": "ContentBlock.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\ContentBlock.cs",
               "RelativeDocumentMoniker": "Data\\ContentBlock.cs",
@@ -258,7 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "HTML_Error.cs",
               "DocumentMoniker": "H:\\PrivateCode\\TestingServer\\ASPNET learning\\GithubPages\\Data\\HTML_Error.cs",
               "RelativeDocumentMoniker": "Data\\HTML_Error.cs",

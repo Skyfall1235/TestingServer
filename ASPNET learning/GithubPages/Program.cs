@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
+#region Swagger and general app setup 
 // Add services to the container.
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
@@ -26,7 +27,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+#endregion
 
+#region Main logic Setup
 const string ProjectJsonLocalPath = "wwwroot/ActiveData/projects.json";
 const string SkillsJsonLocalPath = "wwwroot/ActiveData/Skills.json";
 
@@ -56,6 +59,21 @@ foreach (GenericSkill skill in WebsiteResources.SkillsAndTech.Skills.Values)
 //add the sdkilsl to the global thing now :)
 WebsiteResources.SkillsAndTech.BatchAddSkills(allSkills);
 #endregion
+
+#endregion
+
+//TODO:
+/* - add a post and get for up to date resume
+ * - fix saving skills long term
+ * - redo the mapgroups to be better organized
+ * - learn how to dynamically pull info from prior site to dynamically load the project onto a full page
+ * - redo some of the documentation and logging processes
+ * 
+ * 
+ * 
+ */
+
+#region API endpoints
 
 #region come back to me later to work on saving projects and skills loaded from projects
 
@@ -201,6 +219,8 @@ app.MapPost("/skills", (HttpContext context, GenericSkill newSkill, AdminAuthori
 
 #endregion
 
+#endregion
+
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
@@ -229,10 +249,8 @@ app.Run();
  * 
  * 
  * 
- */
-
-//WEBSITE MODIFICATIONS
-/*
+ *  WEBSITE MODIFICATIONS
+ *
  * so we need a way to dynamically load the content that doesnt invole a modificatyion of the site every time
  * what if we have 2 pages, the hero page, and a dynamic page, we can modify the headers and the URL will just be "projects"
  * we direct people to that and hotload the info there. so 1 page for all projects. depening on whatyp roject is hotloaded!
