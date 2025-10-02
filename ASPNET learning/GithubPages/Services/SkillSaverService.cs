@@ -38,5 +38,10 @@ namespace GithubPages.Services
             // Call your static method to save the data
             WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/projects.json");
         }
+
+        public void OnManualSave()
+        {
+            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/projects.json");
+        }
     }
 }

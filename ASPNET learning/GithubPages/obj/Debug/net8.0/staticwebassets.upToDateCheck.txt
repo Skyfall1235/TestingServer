@@ -1,4 +1,5 @@
-wwwroot\contentServer.html
-wwwroot\projects.json
+wwwroot\Admin.html
+wwwroot\ActiveData\Skills.json
 wwwroot\index.html
-wwwroot\Skills.json
+wwwroot\ActiveData\projects.json
+wwwroot\contentServer.html

@@ -1,8 +1,7 @@
 using GithubPages.Data;
-using GithubPages.Services;
-using Microsoft.AspNetCore.RateLimiting;
 using GithubPages.Data.Projects;
-using System;
+using GithubPages.Services;
+using Microsoft.AspNetCore.Http.HttpResults;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -10,10 +9,12 @@ var builder = WebApplication.CreateBuilder(args);
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-//saving services
+
+#region saving services
 builder.Services.AddSingleton<SkillSaverService>();
 builder.Services.AddSingleton<ProjectSaverService>();
-RateLimiterOptions options = new();
+builder.Services.AddSingleton<AdminAuthorizationService>();
+#endregion
 
 var app = builder.Build();
 
@@ -26,24 +27,24 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
-//beyond here is where we can map gets and posts
-//for now, lets design a get and post for infgormation, and what info is needed.
+const string ProjectJsonLocalPath = "wwwroot/ActiveData/projects.json";
+const string SkillsJsonLocalPath = "wwwroot/ActiveData/Skills.json";
 
-//we can also design a resource for all the relevent m_skills i have used!
+//bring our resources in
+WebsiteResources resources = new WebsiteResources();
 
-WebsiteResources resources = new WebsiteResources(); //so we can modify it at runtime if need be :)
 //load all project data in
-WebsiteResources.Projects = WebsiteResources.LoadProjectsFromJson("wwwroot/projects.json");
+WebsiteResources.Projects = WebsiteResources.LoadProjectsFromJson(ProjectJsonLocalPath);
 List<string> allSkills = WebsiteResources.Projects.SelectMany(p => p.Skills).Distinct().ToList();
 
+#region debug for the skills and stuff for setup since its a few steps
 Console.WriteLine("Loading all Skills as Strings");
 foreach (var skill in allSkills)
 {
     Console.WriteLine("prepped Skill: " + skill.ToString());
 }
 
-List<GenericSkill> skills = WebsiteResources.LoadSkillsFromJson("wwwroot/Skills.json");
-Console.WriteLine(skills.Count);
+List<GenericSkill> skills = WebsiteResources.LoadSkillsFromJson(SkillsJsonLocalPath);
 WebsiteResources.SkillsAndTech.BatchAddSkills(skills, true);
 
 Console.WriteLine("Loading all Skills from file");
@@ -54,20 +55,20 @@ foreach (GenericSkill skill in WebsiteResources.SkillsAndTech.Skills.Values)
 
 //add the sdkilsl to the global thing now :)
 WebsiteResources.SkillsAndTech.BatchAddSkills(allSkills);
+#endregion
 
-Console.WriteLine("adding new skills");
-foreach (GenericSkill skill in WebsiteResources.SkillsAndTech.Skills.Values)
-{
-    Console.WriteLine("Loaded Skill: " + skill.Name + " with category: " + skill.SkillCategory.ToString());
-}
+#region come back to me later to work on saving projects and skills loaded from projects
 
-//load all skills FROM the projects into the json, and then add al lthe skills to the global list
+//load all skills FROM the projects into the json, and then add all the skills to the global list
 //WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/Skills.json");
 //WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson("wwwroot/skills.json"), true);
 
 // Create an endpoint group for versioning or better organization
 var api = app.MapGroup("/api");
 
+#endregion
+
+#region Gets
 // app.MapGet for the "/skills" endpoint
 app.MapGet("/skills", () =>
 {
@@ -75,34 +76,34 @@ app.MapGet("/skills", () =>
     var skillsList = WebsiteResources.SkillsAndTech.Skills.Values
         .OrderBy(skill => skill.SkillCategory)
         .Select(skill => new SkillDTO(
-        skill.Name, 
-        skill.ImageSource, 
+        skill.Name,
+        skill.ImageSource,
         skill.SkillCategory.ToString() ?? "Unknown"))
         .ToList(); // Convert the result to a List
 
     return skillsList; // Return the list of SkillDTO objects
 });
 
+//mapget for getting all links. is this needed? kinda?
 app.MapGet("/Links", () =>
 {
-//ill come back to this later :)
+    //ill come back to this later :)
     return CommonErrors.NoContent;
 });
+
+// map get for the my girhub link (if i want to change this in the future)
 app.MapGet("/Links/Github", () =>
 {
     return WebsiteResources.GithubProfile;
 });
 
-
-
-#region Project Gets
 // app.MapGet for the "/projects" endpoint
 app.MapGet("/projects", () =>
 {
     return WebsiteResources.Projects;
 });
 
-// Add new endpoints for retrieving single items by ID
+//new endpoints for retrieving single items by ID
 api.MapGet("/projects/{id}", (int id) =>
 {
     var project = WebsiteResources.Projects .FirstOrDefault(p => p.Id == id);
@@ -110,7 +111,7 @@ api.MapGet("/projects/{id}", (int id) =>
     return project != null ? Results.Ok(project) : Results.NotFound();
 });
 
-// Add a new endpoint for retrieving a single project by m_title
+//new endpoint for retrieving a single project by title
 api.MapGet("/projects/by-title/{title}", (string title) =>
 {
     // Find a single project by m_title, using case-insensitive comparison.
@@ -119,13 +120,94 @@ api.MapGet("/projects/by-title/{title}", (string title) =>
 });
 #endregion
 
+//DO NOT LET POSTS OF PATCHES RUN WITHOUT AUTHORIZATION
+#region Project Posts and Patches
+
+app.MapPost("/projects", (HttpContext context, Project newProject, AdminAuthorizationService authService, ProjectSaverService projectSaver) =>
+{
+    //auth first for posts
+    var authResult = authService.Authorize(context);
+    if (authResult is not Ok) return authResult;
+
+    if (string.IsNullOrWhiteSpace(newProject.Title))
+    {
+        return Results.BadRequest("Project title is required.");
+    }
+
+    //saving the int here so we can insaert it as a value. i do not like longer 1liners than i have to
+    int newID = WebsiteResources.Projects.Any() ? WebsiteResources.Projects.Max(p => p.Id) + 1 : 1;
+    newProject.SetId(newID);
+
+    WebsiteResources.Projects.Add(newProject);
+
+    projectSaver.OnManualSave();
+
+    return Results.Created($"/projects/{newProject.Id}", newProject);
+});
+
+app.MapPatch("/projects/{id}", (HttpContext context, int id, Project projectUpdates, AdminAuthorizationService authService, ProjectSaverService projectSaver) =>
+{
+    //use my new auth service
+    var authResult = authService.Authorize(context);
+    if (authResult is not Ok) return authResult;
+
+    //ensure p[roject exists
+    var existingProject = WebsiteResources.Projects.FirstOrDefault(p => p.Id == id);
+    if (existingProject == null)
+    {
+        return Results.NotFound($"Project with ID {id} not found.");
+    }
+
+    //set new values when applicable
+    existingProject.SetValues(projectUpdates.Title, projectUpdates.Description, projectUpdates.TitleCardURL, projectUpdates.Growth, projectUpdates.ProjectOverview);
+
+    if (projectUpdates.Skills != null)
+    {
+        existingProject.Skills = projectUpdates.Skills;
+    }
+
+    //manual save because we dont want to lose the data on a crash
+    projectSaver.OnManualSave();
+
+    return Results.Ok(existingProject);
+});
+
+#endregion
+
+#region Skill Post
+
+app.MapPost("/skills", (HttpContext context, GenericSkill newSkill, AdminAuthorizationService authService, SkillSaverService skillSaver) =>
+{
+    //use auth to ensure only admin can mod
+    var authResult = authService.Authorize(context);
+    if (authResult is not Ok) return authResult;
+
+    //do not allow blank skills in
+    if (string.IsNullOrWhiteSpace(newSkill.Name))
+    {
+        return Results.BadRequest("Skill name is required.");
+    }
+
+    //do not allow conflicts
+    if (WebsiteResources.SkillsAndTech.Skills.ContainsKey(newSkill.Name))
+    {
+        return Results.Conflict($"Skill with name '{newSkill.Name}' already exists.");
+    }
+
+    WebsiteResources.SkillsAndTech.Skills.Add(newSkill.Name, newSkill);
+
+    return Results.Created($"/skills", newSkill);
+});
+
+#endregion
+
 app.UseDefaultFiles();
 app.UseStaticFiles();
 
 app.Run();
 
 //objectives for this API
-/* - Have a get HTTP request for the m_skills
+/* - Have a get HTTP request for the skills
  * - have a get request for the images?
  * - have a get request for the info?
  * - probably should have it all added together
@@ -141,9 +223,9 @@ app.Run();
  * - use API key to allow select post requests
  * 
  * part 3 : Saving data as files when the server needs to power down
- * -determine storage technique
- * -load existing data oin start up
- * -unload on shutdown
+ * - determine storage technique
+ * - load existing data oin start up
+ * - unload on shutdown
  * 
  * 
  * 
@@ -152,6 +234,6 @@ app.Run();
 //WEBSITE MODIFICATIONS
 /*
  * so we need a way to dynamically load the content that doesnt invole a modificatyion of the site every time
- * what if we have 2 pages, the hero page, and a dynamic mpage, we can modify the headers and the URL will just be "projects"
+ * what if we have 2 pages, the hero page, and a dynamic page, we can modify the headers and the URL will just be "projects"
  * we direct people to that and hotload the info there. so 1 page for all projects. depening on whatyp roject is hotloaded!
 */

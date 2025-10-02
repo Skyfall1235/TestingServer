@@ -12,6 +12,7 @@ public class WebsiteResources
     /// </summary>
     public static List<Project> Projects = new();
     public static SkillsAndTech SkillsAndTech = new SkillsAndTech();
+    public const string AdminApiKey = "YOUR_SUPER_SECRET_KEY";
     public static string GithubProfile = "https://github.com/Skyfall1235";
     static JsonSerializerOptions options = new JsonSerializerOptions
     {

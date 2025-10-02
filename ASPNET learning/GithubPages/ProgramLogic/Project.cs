@@ -30,6 +30,19 @@ namespace GithubPages.Data.Projects
         /// Gets or sets the list of m_skills and technologies associated with the project.
         /// </summary>
         public List<string> Skills { get; set; }
+
+        public void SetId(int Id)
+        {
+            id = Id;
+        }
+        public void SetValues(string title, string description, string titlecardURL, string growth, string projectOverview)
+        {
+            m_title = title;
+            m_description = description;
+            m_titleCardURL = titlecardURL;
+            m_growth = growth;
+            m_projectOverview = projectOverview;
+        }
         
 
         /// <summary>

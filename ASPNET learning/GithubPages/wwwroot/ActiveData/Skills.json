@@ -32,7 +32,7 @@
   {
     "Name": "Unity DOTS",
     "ImageSource": "",
-    "SkillCategory": 5
+    "SkillCategory": 2
   },
   {
     "Name": "Visual Studio",
@@ -52,12 +52,12 @@
   {
     "Name": "GitHub Actions",
     "ImageSource": "",
-    "SkillCategory": 5
+    "SkillCategory": 1
   },
   {
     "Name": "Git LFS",
     "ImageSource": "",
-    "SkillCategory": 5
+    "SkillCategory": 2
   },
   {
     "Name": "Object-Oriented Programming",

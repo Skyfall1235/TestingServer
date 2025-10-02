@@ -17,11 +17,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="HTML\" />
+    <None Include="wwwroot\index.html" />
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="wwwroot\index.html" />
+    <Folder Include="wwwroot\images\projects\" />
   </ItemGroup>
 
 </Project>
