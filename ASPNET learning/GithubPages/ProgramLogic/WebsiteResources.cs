@@ -5,14 +5,8 @@ using System.Text.Json.Serialization;
 
 public class WebsiteResources
 {
-    /// <summary>
-    /// Gets or sets the static list of projects for the website.
-    /// The property is static to ensure all parts of the application
-    /// access the same list.
-    /// </summary>
     public static List<Project> Projects = new();
     public static SkillsAndTech SkillsAndTech = new SkillsAndTech();
-    public const string AdminApiKey = "YOUR_SUPER_SECRET_KEY";
     public static string GithubProfile = "https://github.com/Skyfall1235";
     static JsonSerializerOptions options = new JsonSerializerOptions
     {
@@ -27,22 +21,17 @@ public class WebsiteResources
     /// <returns>A list of Project objects, or an empty list if an error occurs.</returns>
     public static List<Project> LoadProjectsFromJson(string filePath)
     {
-        // Use a try-catch block for robust file handling
         try
         {
-            // Read all text from the file
+            //read all text
             string jsonString = File.ReadAllText(filePath);
-
-            // Set up deserialization options, including case-insensitivity
             var options = new JsonSerializerOptions
             {
                 PropertyNameCaseInsensitive = true,
             };
-
-            // Deserialize the JSON string into a list of Project objects
+            //deserialize and print it to console as part of the loading process
             var projects = JsonSerializer.Deserialize<List<Project>>(jsonString, options);
 
-            // This is for demonstration purposes.
             if (projects != null)
             {
                 foreach (Project project in projects)
@@ -51,10 +40,9 @@ public class WebsiteResources
                 }
             }
 
-
-            // Return the list, or a new empty list if deserialization fails
             return projects ?? new List<Project>();
         }
+        //dozens of exceptions to catch the littany of problems that can occur
         catch (FileNotFoundException)
         {
             Console.WriteLine($"Error: The file '{filePath}' was not found.");
@@ -80,10 +68,8 @@ public class WebsiteResources
     {
         try
         {
-            // Serialize the list of projects to a JSON string
             string jsonString = JsonSerializer.Serialize(projects, options);
 
-            // Write the JSON string to the specified file path
             File.WriteAllText(filePath, jsonString);
 
             Console.WriteLine($"Successfully saved project data to '{filePath}'.");

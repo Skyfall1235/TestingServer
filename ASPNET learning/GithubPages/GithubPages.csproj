@@ -8,7 +8,7 @@
 
   <ItemGroup>
     <Content Include="Services\SkillSaverService.cs" />
-    <Content Include="Services\WebsiteResources.cs" />
+    <Content Include="ProgramLogic\WebsiteResources.cs" />
   </ItemGroup>
 
   <ItemGroup>

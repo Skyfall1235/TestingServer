@@ -1,5 +1,6 @@
-wwwroot\Admin.html
-wwwroot\ActiveData\Skills.json
-wwwroot\index.html
 wwwroot\ActiveData\projects.json
+wwwroot\ActiveData\Wyatt Murray Developer Resume 9-17-25.docx.pdf
+wwwroot\Admin.html
 wwwroot\contentServer.html
+wwwroot\index.html
+wwwroot\ActiveData\Skills.json

@@ -12,8 +12,10 @@ namespace GithubPages.Data
             SkillCategory = skillCategory;
 
         }
-        // Parameterless constructor needed for deserialization
+        //parameterless constructor needed for deserialization
+#pragma warning disable CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         public GenericSkill()
+#pragma warning restore CS8618 // Non-nullable field must contain a non-null value when exiting constructor. Consider adding the 'required' modifier or declaring as nullable.
         {
         }
 

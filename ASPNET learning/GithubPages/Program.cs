@@ -3,6 +3,7 @@ using GithubPages.Data.Projects;
 using GithubPages.Services;
 using Microsoft.AspNetCore.Http.HttpResults;
 
+
 var builder = WebApplication.CreateBuilder(args);
 
 #region Swagger and general app setup 
@@ -30,8 +31,8 @@ app.UseHttpsRedirection();
 #endregion
 
 #region Main logic Setup
-const string ProjectJsonLocalPath = "wwwroot/ActiveData/projects.json";
-const string SkillsJsonLocalPath = "wwwroot/ActiveData/Skills.json";
+string ProjectJsonLocalPath = app.Configuration["ProjectJsonLocalPath"] ?? throw new InvalidOperationException("ProjectJsonLocalPath configuration setting is missing or empty.");
+string SkillsJsonLocalPath = app.Configuration["SkillsJsonLocalPath"] ?? throw new InvalidOperationException("skillJsonLocation configuration setting is missing or empty.");
 
 //bring our resources in
 WebsiteResources resources = new WebsiteResources();
@@ -64,13 +65,13 @@ WebsiteResources.SkillsAndTech.BatchAddSkills(allSkills);
 
 //TODO:
 /* - add a post and get for up to date resume
- * - fix saving skills long term
+ * - fix endpoint groups to match what they need to better organise the api
  * - redo the mapgroups to be better organized
  * - learn how to dynamically pull info from prior site to dynamically load the project onto a full page
  * - redo some of the documentation and logging processes
- * 
- * 
- * 
+ * - fix skills per project are unavailable
+ * - fix the learn more and github links for each project (embed them into the project class API side and serve them wit the rest of the content
+ * -convert all maps to static async methods when possible
  */
 
 #region API endpoints
@@ -78,64 +79,67 @@ WebsiteResources.SkillsAndTech.BatchAddSkills(allSkills);
 #region come back to me later to work on saving projects and skills loaded from projects
 
 //load all skills FROM the projects into the json, and then add all the skills to the global list
-//WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/Skills.json");
-//WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson("wwwroot/skills.json"), true);
+WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), SkillsJsonLocalPath);
+WebsiteResources.SkillsAndTech.BatchAddSkills(WebsiteResources.LoadSkillsFromJson(SkillsJsonLocalPath), true);
 
-// Create an endpoint group for versioning or better organization
-var api = app.MapGroup("/api");
+//endpoint groups
+var portfolio = app.MapGroup("/portfolio");
+var projects = portfolio.MapGroup("/projects");
 
 #endregion
 
 #region Gets
-// app.MapGet for the "/skills" endpoint
-app.MapGet("/skills", () =>
+portfolio.MapGet("/skills", () =>
 {
-    // Convert the dictionary values into a list of SkillDTOs
     var skillsList = WebsiteResources.SkillsAndTech.Skills.Values
         .OrderBy(skill => skill.SkillCategory)
         .Select(skill => new SkillDTO(
         skill.Name,
         skill.ImageSource,
         skill.SkillCategory.ToString() ?? "Unknown"))
-        .ToList(); // Convert the result to a List
+        .ToList();
 
-    return skillsList; // Return the list of SkillDTO objects
+    return skillsList;
 });
 
 //mapget for getting all links. is this needed? kinda?
-app.MapGet("/Links", () =>
+portfolio.MapGet("/Links", () =>
 {
     //ill come back to this later :)
-    return CommonErrors.NoContent;
+    return Results.NoContent;
 });
 
 // map get for the my girhub link (if i want to change this in the future)
-app.MapGet("/Links/Github", () =>
+portfolio.MapGet("/Links/Github", () =>
 {
     return WebsiteResources.GithubProfile;
 });
 
-// app.MapGet for the "/projects" endpoint
-app.MapGet("/projects", () =>
+projects.MapGet("/", () =>
 {
     return WebsiteResources.Projects;
 });
 
 //new endpoints for retrieving single items by ID
-api.MapGet("/projects/{id}", (int id) =>
+projects.MapGet("/{id}", GetGetProjectById);
+
+static IResult GetGetProjectById(int id)
 {
-    var project = WebsiteResources.Projects .FirstOrDefault(p => p.Id == id);
+    var project = WebsiteResources.Projects.FirstOrDefault(p => p.Id == id);
 
     return project != null ? Results.Ok(project) : Results.NotFound();
-});
+}
 
 //new endpoint for retrieving a single project by title
-api.MapGet("/projects/by-title/{title}", (string title) =>
+projects.MapGet("/{title}", GetProjectByStringTitle);
+
+static IResult GetProjectByStringTitle(string title)
 {
-    // Find a single project by m_title, using case-insensitive comparison.
     var project = WebsiteResources.Projects.FirstOrDefault(p => p.Title.Equals(title, StringComparison.OrdinalIgnoreCase));
     return project != null ? Results.Ok(project) : Results.NotFound();
-});
+}
+
+
 #endregion
 
 //DO NOT LET POSTS OF PATCHES RUN WITHOUT AUTHORIZATION

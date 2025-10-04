@@ -1,47 +1,45 @@
-using GithubPages.Data;
-using GithubPages.Data.Projects;
+using System.Diagnostics;
 
 namespace GithubPages.Services
 {
     public class SkillSaverService
     {
         private readonly IHostApplicationLifetime _appLifetime;
+        private readonly string skillJsonLocation;
 
-        public SkillSaverService(IHostApplicationLifetime appLifetime)
+        public SkillSaverService(IHostApplicationLifetime appLifetime, IConfiguration configuration)
         {
             _appLifetime = appLifetime;
-
-            // This registers a callback that will be executed when the application is stopping.
+            skillJsonLocation = configuration["SkillsJsonLocalPath"] ?? throw new InvalidOperationException("skillJsonLocation configuration setting is missing or empty.");
+            Debug.WriteLine(skillJsonLocation);
             _appLifetime.ApplicationStopping.Register(OnApplicationStopping);
         }
 
         private void OnApplicationStopping()
         {
-            // Example: Get your list of skills here (this would come from a data source)
-            WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/Skills.json");
+            WebsiteResources.SaveSkillsToJson(WebsiteResources.SkillsAndTech.Skills.Values.ToList(), "wwwroot/ActiveData/projects.json");
         }
     }
     public class ProjectSaverService
     {
         private readonly IHostApplicationLifetime _appLifetime;
+        private readonly string projectJsonLocation;
 
-        public ProjectSaverService(IHostApplicationLifetime appLifetime)
+        public ProjectSaverService(IHostApplicationLifetime appLifetime, IConfiguration configuration)
         {
             _appLifetime = appLifetime;
-
-            // This registers a callback that will be executed when the application is stopping.
+            projectJsonLocation = configuration["ProjectJsonLocalPath"] ?? throw new InvalidOperationException("skillJsonLocation configuration setting is missing or empty.");
             _appLifetime.ApplicationStopping.Register(OnApplicationStopping);
         }
 
         private void OnApplicationStopping()
         {
-            // Call your static method to save the data
-            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/projects.json");
+            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/ActiveData/projects.json");
         }
 
         public void OnManualSave()
         {
-            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/projects.json");
+            WebsiteResources.SaveProjectsToJson(WebsiteResources.Projects, "wwwroot/ActiveData/projects.json");
         }
     }
 }
